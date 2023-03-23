@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="EUC-KR">
+  <title>Hello World "IF / ELSE"</title>
+ </head>
+<body>
+ <h1> IF / ELSE {{ warranty }} </h1>
+
+{% if warranty %}
+    <p>Your warranty information will be included in the packaging.</p> 
+{% endif %}
+
+<br/>
+{% if warranty %}
+    <p>Your warranty information will be included in the packaging.</p> 
+{% else %}
+    <p> No warranty of your product</p>
+{% endif %}
+
+{% if vara > varb %}
+   <p> {{vara}} is greater than {{varb}}
+{% elif vara < varb %}
+   <p> {{varb}} is greater than {{vara}}
+{% else %}
+   <p> {{varb}} equals to {{vara}}   
+{% endif %}
+
+{% if vara > 5 and varb < 8 %}
+    <p> Yes, {{ vara }} is greater than 5 and <br>
+        {{ varb }} is less than 8 - TRUE </p>
+{% else %}
+    <p> false </p>
+{% endif %}
+
+</body>
+</html>

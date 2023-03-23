@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Hello World "For"</title>
+</head>
+<body>
+<h1> For Loop {{ today }} </h1>
+
+<br/>
+{% for i in '123456789' %}
+    {{ forloop.counter0 }}
+{% endfor %}
+
+<br/>
+{% for i in 'xxxxxxxxxxxxxxxx' %}
+    {{ forloop.counter }}
+{% endfor %}
+
+<br/>
+
+{% for i in 'xxxxxxxxxxxxxxxxxxxxxxxxxx' %}
+    {{ forloop.revcounter }}
+{% endfor %}
+
+<br/>
+
+{% for i in 'xxxxxxxxxxxxxxxxxxxxxxxxxx' %}
+    {{ forloop.revcounter0 }}
+{% endfor %}
+
+<br/>
+
+{% for i in 'xxxxxxxxxxxxxxxxxxxxxxxxxx' %}
+    {{ forloop.first }}
+{% endfor %}
+
+<br/>
+
+{% for i in 'xxxxxxxxxxxxxxxxxxxxxxxxxx' %}
+    {{ forloop.last }}
+{% endfor %}
+
+{% for i in weekday%}
+<p> {{j}}</p>
+{% endfor %}
+
+<p> ---------------- </p>
+
+{% for i in weekday%}
+ {% for j in 'xxxx' %}
+    {{i}}
+    {{forloop.parentloop.counter}}
+    <!--   {{forloop.counter}} -->
+  {% endfor %}
+  <br/>
+{% endfor %}
+
+</body>
+</html>
